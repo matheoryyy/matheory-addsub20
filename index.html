@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Matheory 20內加減打地鼠遊戲</title>
+  <title>MATHEORY 20內加減打地鼠🐹</title>
   <style>
     :root {
       --primary: #FF7A00;
@@ -710,7 +710,7 @@
     <div class="hud">
       <div class="hud-box">
         <div class="hud-label">⏱️ 剩餘時間</div>
-        <div class="hud-value" id="timerDisplay">60s</div>
+        <div class="hud-value" id="timerDisplay">120s</div>
       </div>
       <div class="hud-box">
         <div class="hud-label">⭐ 目前得分</div>
@@ -769,8 +769,8 @@
         </div>
       </div>
 
-      <div class="modal-brand">✨ MATHEORY 數理邏輯訓練 ✨</div>
-      <h1 class="modal-title">Matheory 20內加減打地鼠遊戲</h1>
+      <div class="modal-brand">✨ MATHEORY 數理運算訓練 ✨</div>
+      <h1 class="modal-title">MATHEORY 20內加減打地鼠🐹</h1>
       <p class="modal-subtitle">限時 60 秒！看清楚上方算式，敲擊舉著正確答案牌子的小地鼠吧！</p>
 
       <div class="level-list">
@@ -899,7 +899,7 @@
     let combo = 0;
     let maxCombo = 0;
     let correctCount = 0;
-    let timeLeft = 60;
+    let timeLeft = 120;
     let isPlaying = false;
     let currentAnswer = 0;
     let timerInterval = null;
@@ -1054,7 +1054,7 @@
       });
 
       // 20 內心算思考時間稍微充裕一點（初始 4.2 秒，最快保留 2.5 秒）
-      const stayDuration = Math.max(2500, 4200 - correctCount * 65);
+      const stayDuration = Math.max(10000, 10000 - correctCount * 65);
       roundTimeout = setTimeout(() => {
         if (isPlaying && !roundLocked) {
           combo = 0;
@@ -1123,7 +1123,7 @@
       combo = 0;
       maxCombo = 0;
       correctCount = 0;
-      timeLeft = 60;
+      timeLeft = 120;
       isPlaying = true;
 
       currentLevelTag.textContent = LEVEL_NAMES[level];
